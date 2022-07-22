@@ -1,0 +1,36 @@
+﻿@model List<MicrosoftOutlookAppointments.Models.clsAppointment>
+@{
+    ViewBag.Title = "Home Page";
+}
+<a class="btn btn-primary" href="/Home/AddAppointments" >Add Event</a>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Subject
+            </th>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.Subject
+            </td>
+            <td>
+                @item.StartDate.ToString("dd MMM ,yyyy hh:mm tt")
+            </td>
+            <td>
+                @item.EndDate.ToString("dd MMM ,yyyy hh:mm tt")
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
