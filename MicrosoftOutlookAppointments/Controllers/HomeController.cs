@@ -77,7 +77,7 @@ namespace MicrosoftOutlookAppointments.Controllers
 
 
             Appointment appointment = new Appointment(servicex);
-            // Set the properties on the appointment object to create the appointment.
+            
             appointment.Subject = "Code2night Event";
             appointment.Body = "Focus on backhand this week.";
             appointment.Start = DateTime.Now.AddDays(1);
